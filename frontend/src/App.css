@@ -1,0 +1,423 @@
+/* .App {
+  text-align: center;
+} */
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+} */
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* Add fonts from the app's server 
+    @font-face {                
+      font-family: 'FontName';
+      src: url('FontName.woff2') format('woff2');
+    } 
+    ...or hosted services like Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+  
+  /* @import 'node_modules/modern-normalize/modern-normalize.css'; */
+        /* npm install modern-normalize
+          Resets elements for browser consistency.  
+          https://www.npmjs.com/package/modern-normalize
+        */         
+  
+  /*Component-specific stylesheets, if any. */
+  @import "~react-image-gallery/styles/css/image-gallery.css";   
+
+/*   ----- Variables  -----  */
+:root {
+    --custom-color-tan:rgba(188, 194, 187, 0.781);
+    --custom-color-dark-tan:rgb(148, 150, 141);
+    --custom-color-green:rgba(161, 255, 177, 0.582);
+    --custom-color-dark-green:rgb(83, 107, 84);
+    /*--custom-embellishment-name:;*/
+  }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {} or :root {} */
+    /*background-color:;*/
+    background-image:url(images/light-grey-background-.jpg);
+    background-position: top left;
+    color:var(--custom-color-dark-green);
+    font-family: 'Poppins', sans-serif;; /* Define with at least one font name and its related generic family name.*/
+    margin:0 auto;
+    padding:5px;
+    max-width: 1200px;
+    min-width: 800px;
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  header {
+    color:var(--custom-color-green);
+    background-color:var(--custom-color-dark-green);
+    margin-left:0%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding:5px;
+    border: 2px solid var(--custom-color-dark-tan);  
+  }
+  main {
+    color:var(--custom-color-dark-green);
+    background-color:var(--custom-color-tan);
+    margin-left:0%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding:5px;
+    border: 2px solid var(--custom-color-dark-tan);  
+  }
+  section {}
+    article {}
+      #topic1 {}
+      #topic2 {}
+  div {}
+  aside {}
+  footer {
+    color:var(--custom-color-green);
+    background-color:var(--custom-color-dark-green);
+    margin-left:0%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding:5px;
+    border: 2px solid var(--custom-color-dark-tan);  
+  }
+  
+  /* ----- Anchors ----- Text links */
+  a {color: var(--custom-color-green)}
+  a:link {color: var(--custom-color-dark-green)}
+  a:hover {color: var(--custom-color-green)}
+  a:active {}
+  a:visited {}
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+  nav {
+    text-align:left
+  }
+  nav a {
+    background-color:var(--custom-color-dark-tan);
+    border:2px solid rgb(19, 18, 18);
+    border-radius:5px 5px 0 0; 
+    color: var(--custom-color-dark-green);
+    font-size:1.1em;
+    font-weight:bold;
+    margin-right:3px;
+    padding: 20px;
+    text-decoration:none;
+  }
+  nav a:hover {
+    background-color:var(--custom-color-dark-green);
+    color:rgb(70, 67, 67);
+  }
+  
+  /*  -----  Typography  ----- */
+  p {}
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt {}
+  dd {}
+  
+  h1, h2, h3, h4, h5, h6 {font-family: 'Archivo Black', sans-serif;} 
+  h1 {}
+  h2 {}
+  h3 {}
+  h4 {}
+  h5 {}
+  h6 {}
+  
+  abbr {}
+  acronym {}
+  address {}
+  blockquote {}
+    q {}
+    cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {}
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography ----- */
+  pre {}
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  
+  /*  ----- Table ----- */
+  table {
+    max-width:99%;
+    min-width:85%;
+    font-family: inherit;
+    background-color:var(--custom-color-dark-tan);
+    border:var(--custom-color-dark-green);
+    border-radius:5px 5px 0 0; 
+    color: var(--custom-color-dark-green);
+    margin-right:5%;
+    margin-left:5%;
+    padding: 3%;
+    text-decoration:none;
+  }
+  caption {
+    text-align: center;
+    font-size:1.1em;
+    font-weight:bold;
+  }
+  thead {}
+  tbody {}
+  tfoot {}
+
+  #hikes th:nth-child(n),
+  #hikes td:nth-child(n){
+    text-align: center;
+    min-width: 100px;
+  }
+
+  /* #hikes th:nth-child(7),
+  #hikes td:nth-child(7){
+    text-align: center;
+    min-width: 80px;
+  }
+
+  #hikes th:nth-child(6),
+  #hikes td:nth-child(6){
+    text-align: center;
+    min-width: 80px;
+  }
+
+  #hikes th:nth-child(5),
+  #hikes td:nth-child(5){
+    text-align: center;
+    min-width: 100px;
+  } */
+
+  tr {
+    
+  }
+    tr:nth-child(even) {
+        background-color:var(--custom-color-tan);
+      }
+    tr:nth-child(odd){
+      background-color: rgba(188, 194, 187, 0.781);
+    }
+  th {
+    font-size:1.1em;
+    font-weight:bold;
+  }
+  td {
+    padding: 1%
+  }
+    td:nth-child(1) {}
+  colgroup {}
+  data {}
+  datalist {}
+  
+  
+  /*  ----- Form ----- */
+  form {}
+
+  fieldset {
+    border: 2px solid var(--custom-color-dark-tan);  
+    background-color: var(--custom-color-tan); 
+    margin-top:1px; 
+    padding:1px; 
+  }
+  legend {
+    margin-top:1px; 
+    margin-left:1px;
+    padding:1px;
+    font-weight: bold
+  }
+  label {
+    display: block;
+    margin-left:1px;
+    margin-top:1px;
+  }
+
+  label.required:after{
+    text-align: center;
+  }
+
+  button, select { 
+    font-size:120%;
+    border: var(--custom-color-dark-green);
+    padding:5px;
+    font-family:inherit;
+    margin-left:5px;
+    margin-bottom: 5px;
+  }
+  input {
+    font-family: inherit;
+  }
+  input:focus{
+    color: var(--custom-color-dark-green);
+  }
+  input::placeholder {
+      font-style: italic;
+    }
+  input:required {
+    border:2px solid green;
+  }
+  textarea::placeholder{
+    font-style: italic;
+    max-width: 100px;
+  }
+
+  #hikes td input[type=number]{
+    max-width:100px;
+  }
+  #hikes td input[type=text]{
+    max-width:100px;
+  }
+
+  #hikes td input[type=date]{
+    max-width:100px;
+  }
+
+  #hikes{text-align:center}
+  input{display:inline-block}
+
+  textarea:focus{
+    color: var(--custom-color-dark-green);
+    height:auto;
+    width:auto;
+  }
+    output {}
+    meter {}
+    progress {}
+    select {}
+      optgroup {}
+      option {}
+    textarea {
+      padding:1%;
+      font-family:inherit;
+      margin-left:5px;
+    }
+  
+  /* ----- Media ----- */
+  figure {
+    margin:1%; 
+    padding:0;
+    width:40%;    /* Adjust the percentage based on the combined width of borders and and padding. */
+    float:center;
+    border:1px solid gray;
+  }
+    figcaption {
+        font-size:80%;
+        font-weight:bold;
+        text-align:center;
+        display:block;
+        padding:1%;  
+    }
+    figure img {}
+  svg {}
+  picture {}
+    source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {}
+  
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  .gallery {
+    color:var(--custom-color-green);
+    background-color:var(--custom-color-tan);
+    display: flex;
+    flex-flow: row wrap;
+    margin:0; 
+    padding:0;    
+  }
+
+  .gallery figure {
+    color:var(--custom-color-green);
+    background-color:var(--custom-color-dark-green);
+    width: 320px;
+    margin:1%;
+    padding:1%;
+  }
+  
+  .gallery figcaption {
+    color:var(--custom-color-green);
+    background-color:var(--custom-color-dark-green);
+    display:block; 
+    padding: 1% 1% 2% 1%;
+  }
+  
+  .gallery img  {
+      width:100%;
+      margin:0;
+      padding:0;
+  }
+  
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}
+  
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}
